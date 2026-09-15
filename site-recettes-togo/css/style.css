@@ -1,0 +1,900 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #fffaf0;
+}
+
+
+/* MENU */
+
+header {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #12372a;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f5b700;
+}
+
+
+/* GRANDE AFFICHE */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/affiche-togo.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.petit-titre {
+    color: #f5b700;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #f5b700;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 16px 28px;
+    background-color: #f5b700;
+    color: #172b20;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.bouton:hover {
+    transform: scale(1.05);
+}
+
+
+/* PRÉSENTATION */
+
+.presentation {
+    text-align: center;
+    padding: 70px 10%;
+}
+
+.presentation h2 {
+    font-size: 35px;
+    color: #12372a;
+    margin-bottom: 20px;
+}
+
+.presentation p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
+  line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-text strong {
+    color: #12372a;
+}
+
+
+/* PIED DE PAGE */
+
+footer {
+    background-color: #12372a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    margin: 8px;
+    font-size: 18px;
+}
+
+Puis :
+
+Ctrl + S 💾
+
+👀 Ensuite
+
+Retourne sur apropos.html dans Edge et fais :
+
+Ctrl + R
+
+Tu devrais avoir quelque chose ressemblant à :
+
+       À PROPOS DE MOI
+
+    ┌─────────────┐
+    │             │       Bonjour et bienvenue !
+    │   TA PHOTO  │
+    │             │       Je suis Nadiyatou BYAOU...
+    │             │
+    └─────────────┘       Je souhaite partager...
+    
+    ─────────────────────────────────────────
+       La cuisine togolaise...
+
+Ta photo sera grande, élégante, avec une bordure dorée et des coins arrondis. 🇹🇬✨
+
+👉 Fais ça et regarde le résultat. Après, on passera à la partie la plus importante : créer la page des 15 recettes. 🍲🔥
+
+ces bon on peut continuer
+
+Oui 😁🍲 ! Maintenant on attaque la partie centrale du site : les recettes togolaises.
+
+On va commencer par créer une page qui présente les 15 recettes sous forme de belles cartes, avec une photo, le nom du plat et un bouton « Voir la recette ».
+
+🟢 Étape 14 — créer recettes.html
+
+Dans ton dossier :
+
+site-recettes-togo
+
+fais :
+
+Clic droit → Nouveau → Document texte
+
+Renomme-le :
+
+recettes.html
+
+⚠️ Vérifie bien que ce n'est pas recettes.html.txt.
+
+🟢 Étape 15 — mettre le code
+
+Ouvre recettes.html avec le Bloc-notes.
+
+Fais Ctrl + A, puis colle ceci :
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recettes togolaises - Saveurs du Togo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <header>
+
+        <div class="logo">
+            Saveurs du Togo
+        </div>
+
+        <nav>
+
+            <a href="index.html">Accueil</a>
+
+            <a href="apropos.html">À propos</a>
+
+            <a href="recettes.html">Recettes</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- TITRE -->
+
+    <section class="recipes-page">
+
+        <h1>Nos recettes togolaises 🇹🇬</h1>
+
+        <p class="intro-recettes">
+            Découvrez une sélection de recettes traditionnelles
+            qui font la richesse de la cuisine togolaise.
+        </p>
+
+
+        <!-- CARTES DES RECETTES -->
+
+        <div class="recipes-grid">
+
+
+            <!-- RECETTE 1 -->
+
+            <div class="recipe-card">
+
+                <img src="images/akoume.jpg" alt="Akoumé">
+
+                <div class="recipe-info">
+
+                    <h2>Akoumé</h2>
+
+                    <p>
+                        Une délicieuse pâte de maïs,
+                        incontournable de la cuisine togolaise.
+                    </p>
+
+                    <a href="#" class="recipe-button">
+                        Voir la recette
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECETTE 2 -->
+
+            <div class="recipe-card">
+
+                <img src="images/ablo.jpg" alt="Ablo">
+
+                <div class="recipe-info">
+
+                    <h2>Ablo</h2>
+
+                    <p>
+                        De petits pains de maïs
+                        doux et légèrement sucrés.
+                    </p>
+
+                    <a href="#" class="recipe-button">
+                        Voir la recette
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECETTE 3 -->
+
+            <div class="recipe-card">
+
+                <img src="images/djenkoume.jpg" alt="Djenkoumé">
+
+                <div class="recipe-info">
+
+                    <h2>Djenkoumé</h2>
+
+                    <p>
+                        Une préparation traditionnelle
+                        à base de farine de maïs.
+                    </p>
+
+                    <a href="#" class="recipe-button">
+                        Voir la recette
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECETTE 4 -->
+
+            <div class="recipe-card">
+
+                <img src="images/ayimolou.jpg" alt="Ayimolou">
+
+                <div class="recipe-info">
+
+                    <h2>Ayimolou</h2>
+
+                    <p>
+                        Un savoureux mélange de riz
+                        et de haricots.
+                    </p>
+
+                    <a href="#" class="recipe-button">
+                        Voir la recette
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECETTE 5 -->
+
+            <div class="recipe-card">
+
+                <img src="images/gboma.jpg" alt="Gboma dessi">
+
+                <div class="recipe-info">
+
+                    <h2>Gboma dessi</h2>
+
+                    <p>
+                        Une sauce traditionnelle préparée
+                        avec des feuilles de gboma.
+                    </p>
+
+                    <a href="#" class="recipe-button">
+                        Voir la recette
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECETTE 6 -->
+
+            <div class="recipe-card">
+
+                <img src="images/fufu.jpg" alt="Fufu">
+
+                <div class="recipe-info">
+
+                    <h2>Fufu</h2>
+
+                    <p>
+                        Une pâte traditionnelle souvent
+                        accompagnée d'une sauce généreuse.
+                    </p>
+
+                    <a href="#" class="recipe-button">
+                        Voir la recette
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            La cuisine togolaise, c'est plus qu'un repas...
+        </p>
+
+        <p>
+            C'est une histoire, une culture, un partage ! 🇹🇬
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+
+Puis Ctrl + S.
+
+🟡 Important
+
+Pour l'instant, j'ai mis 6 recettes seulement dans la page afin qu'on construise correctement le système avant d'ajouter les 15.
+
+Les photos recherchées par le code sont :
+
+images
+│
+├── akoume.jpg
+├── ablo.jpg
+├── djenkoume.jpg
+├── ayimolou.jpg
+├── gboma.jpg
+└── fufu.jpg
+
+
+/* PAGE DES RECETTES */
+
+.recipes-page {
+    padding: 80px 7%;
+    background-color: #fffaf0;
+    min-height: 100vh;
+}
+
+.recipes-page h1 {
+    text-align: center;
+    color: #12372a;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.intro-recettes {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+}
+
+
+/* GRILLE */
+
+.recipes-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* CARTE */
+
+.recipe-card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.20);
+}
+
+
+/* PHOTO */
+
+.recipe-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* INFORMATIONS */
+
+.recipe-info {
+    padding: 25px;
+}
+
+.recipe-info h2 {
+    color: #12372a;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.recipe-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* BOUTON */
+
+.recipe-button {
+    display: inline-block;
+    background-color: #f5b700;
+    color: #172b20;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.recipe-button:hover {
+    background-color: #12372a;
+    color: white;
+}
+
+
+/* ADAPTATION TÉLÉPHONE */
+
+@media (max-width: 900px) {
+
+    .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipes-page h1 {
+        font-size: 35px;
+    }
+
+}
+/* PAGE D'UNE RECETTE */
+
+.recipe-detail {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 7%;
+    background-color: #fffaf0;
+}
+
+.back-button {
+    display: inline-block;
+    color: #12372a;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.recipe-detail h1 {
+    text-align: center;
+    color: #12372a;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.recipe-intro {
+    text-align: center;
+    font-size: 19px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.recipe-main-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.recipe-box {
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-box h2 {
+    color: #12372a;
+    margin-bottom: 20px;
+}
+
+.recipe-box li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.recipe-box p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+/* =========================
+   PAGE CONTACT
+========================= */
+
+.contact-page {
+    padding: 80px 8%;
+    background-color: #fffaf0;
+    min-height: 100vh;
+}
+
+.contact-page h1 {
+    text-align: center;
+    color: #12372a;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-intro {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* INFORMATIONS */
+
+.contact-info,
+.contact-form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: #12372a;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 5px solid #f5b700;
+    background-color: #fffaf0;
+    border-radius: 10px;
+}
+
+.contact-item h3 {
+    color: #12372a;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.contact-item p {
+    color: #555;
+    font-size: 17px;
+}
+
+/* FORMULAIRE */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    color: #12372a;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 2px solid #f5b700;
+}
+
+.contact-form button {
+    padding: 15px 25px;
+    background-color: #f5b700;
+    color: #172b20;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    .recipe-button {
+    display: inline-block;
+    background-color: #f5b700;
+    color: #172b20;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.recipe-button:hover {
+    background-color: #12372a;
+    color: white;
+    transform: scale(1.08);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+}
+    transform: scale(1.03);
+}
+
+
+/* ADAPTATION TÉLÉPHONE */
+
+@media (max-width: 700px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page h1 {
+        font-size: 38px;
+    }
+
+    .contact-page {
+        padding: 50px 5%;
+    }
+}
+/* BOUTON WHATSAPP */
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 25px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+}
+
+/* ZOOM DES IMAGES */
+
+.recipe-card img {
+    transition: transform 0.4s ease;
+}
+
+.recipe-card:hover img {
+    transform: scale(1.05);
+}
+
+.hero-content {
+    animation: apparition 1.5s ease-out;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   APPARITION DES CARTES
+========================= */
+
+.recipe-card {
+    animation: apparitionCarte 0.8s ease-out both;
+}
+
+.recipe-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.recipe-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.recipe-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.recipe-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.recipe-card:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.recipe-card:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.recipe-card:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.recipe-card:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.recipe-card:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+.recipe-card:nth-child(11) {
+    animation-delay: 1s;
+}
+
+.recipe-card:nth-child(12) {
+    animation-delay: 1.1s;
+}
+
+.recipe-card:nth-child(13) {
+    animation-delay: 1.2s;
+}
+
+.recipe-card:nth-child(14) {
+    animation-delay: 1.3s;
+}
+
+@keyframes apparitionCarte {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  
