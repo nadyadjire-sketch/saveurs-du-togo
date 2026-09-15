@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accès aux recettes - Saveurs du Togo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            Saveurs du Togo
+        </div>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À propos</a>
+                     <a href="acces.html">acces aux Recettes</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact-page">
+
+        <h1>🔐 Accès aux recettes</h1>
+
+        <p class="contact-intro">
+            Après vérification de votre paiement de 100 F CFA,
+            entrez le code d'accès que nous vous avons envoyé.
+        </p>
+
+        <div class="contact-container">
+
+            <div class="contact-form">
+
+                <h2>Votre code d'accès</h2>
+
+                <form onsubmit="verifierCode(event)">
+
+                    <label for="code">Code</label>
+
+                    <input
+                        type="password"
+                        id="code"
+                        placeholder="Entrez votre code"
+                        required
+                    >
+
+                    <button type="submit">
+                        🔓 Accéder aux recettes
+                    </button>
+
+                    <p id="message"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+            La cuisine togolaise, c'est plus qu'un repas...
+        </p>
+
+        <p>
+            C'est une histoire, une culture, un partage ! 🇹🇬
+        </p>
+
+    </footer>
+
+    <script>
+
+        function verifierCode(event) {
+
+            event.preventDefault();
+
+            const code = document.getElementById("code").value;
+
+            if (code === "TOGO100") {
+
+                window.location.href = "recettes.html";
+
+            } else {
+
+                document.getElementById("message").textContent =
+                    "❌ Code incorrect. Vérifiez votre code.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
